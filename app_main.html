@@ -5,169 +5,235 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <marquee behavior="scroll" direction="left" scrollamount="5" scrollspeed="0.1">
+    <marquee class="marquee" behavior="scroll" direction="left" scrollamount="5" scrollspeed="0.1">
         Du grain à votre tasse. Un café qui vous ressemble.
     </marquee>
-    <header>
-        <div>
-            <img src="./resources/Signature de marque.png" alt="Signature de marque">
+
+    <header class="header">
+        <div class="the_header_img_div">
+            <img id="nav_bar_02_id" class="the_header_img" src="./resources/Signature de marque.png"
+                alt="Signature de marque">
         </div>
-        <div>
-            <nav>
+        <div class="nav_bar_01_div non_visible">
+            <nav class="nav_bar_01">
                 <a href="./app_main.html">L'atelier café</a>
-                <a href="./notre_savoir_faire.html">notre_savoir_faire</a>
+                <a href="./notre_savoir_faire.html">notre savoir faire</a>
                 <a href="Besoin d'aide ?">Besoin d'aide ?</a>
             </nav>
         </div>
-        <div>
+        <div class="pannier_img_div">
             <div>
-                <img src="./resources/Group.png" alt="pannier des produit">
+                <img class="pannier_img" src="./resources/Group.png" alt="pannier des produit">
+                <div id="call_order">0</div>
             </div>
-            <div>
-                <small>0</small>
+            <div class="order_nbrs">
+
             </div>
         </div>
     </header>
+    <nav class="nav_bar_02 hidden">
+        <a href="./app_main.html">L'atelier café</a>
+        <a href="./notre_savoir_faire.html">notre_savoir_faire</a>
+        <a href="Besoin d'aide ?">Besoin d'aide ?</a>
+    </nav>
     <main>
-        <section class="Personnaliser">
-            <div>
-                <div>
-                    <div>
-                        <span>LE CAFÉ, À VOTRE FAÇON</span>
-                        <small>01 / 04</small>
+        <section>
+            <div class="Personnaliser">
+                <p class="page_slected ">
+                    <span class="the_first_span"> 01 Personnaliser </span> — <span class="the_second_span">02
+                        Récapitulatif</span>
+                </p>
+                <div class="the_mix">
+                <div class="part_1">
+                    
+                    <div class="the_first_div">
+                        <span class="image_entete" id="ioo">LE CAFÉ, À VOTRE FAÇON</span>
+                        <small class="image_entete_date">01 / 04</small>
                     </div>
-                    <div>
-                        <img src="./resources/Café M.png" alt="Coffee Mug">
+                    <div class="part_1_image_container">
+                        <img class="part_1_image" src="./resources/Café M.png" alt="Coffee Mug">
                     </div>
-                    <div>
-                        <h2>Un petit rituel. Beaucoup de vous.</h2>
-                        <p>ESPRESSO · M · AVOINE · CARAMEL</p>
+                    <div class="sous_titre">
+                        <h2 class="sous_titre_h2">Un petit rituel. Beaucoup de vous.</h2>
+                        <p class="sous_titre_p">ESPRESSO · M · AVOINE · CARAMEL</p>
                     </div>
-                    <div>
-                        <p>Torréfié avec soin</p>
-                        <p>Préparé à la demande</p>
+                    <div class="sous_sous_titre">
+                        <p class="sous_titre_p">Torréfié avec soin</p>
+                        <p class="sous_titre_p">Préparé à la demande</p>
                     </div>
                 </div>
-                <div>
-                    <p>
-                        <span>01 Personnaliser</span> — <span>02 Récapitulatif</span>
+                <div class="part_2">
+                    <p class="page_slected hidden">
+                        <span class="the_first_span">01 Personnaliser</span> — <span class="the_second_span">02
+                            Récapitulatif</span>
                     </p>
                     <div>
-                        <p>VOTRE COFFEE SHOP, AUTREMENT.</p>
-                        <h2>Votre pause,<br>
+                        <p class="votre_coffe_shop">VOTRE COFFEE SHOP, AUTREMENT.</p>
+                        <h2 class="votre_pause">Votre pause,<br>
                             votre signature.</h2>
-                        <p>Quelques envies, un café unique. <br>
+                        <p class="Quelques_envies">Quelques envies, un café unique. <br>
                             À vous de composer la suite.</p>
                     </div>
                     <div>
-                        <h3>01 La base</h3>
-                        <div>
-                            <div>
-                                <p>Espresso</p>
-                                <p>18,00 DH</p>
-                            </div>
-                            <div>
-                                <p>Filtre</p>
-                                <p>16,00 DH</p>
-                            </div>
+                        <div class="h3_dev">
+                            <h3 class="label_h3">01 &nbsp La base</h3><span>Choix unique</span>
+                        </div>
+                        <div class="flex_row ">
+                            <label class="width1">
+                                <span></span>
+                                <input type="radio" name="base" >
+                                <div>
+                                    <span class="base-espresso-name"></span>
+                                    <span class="base-espresso-price"></span>
+                                </div>
+                            </label>
+                            <label class="width1">
+                                <span></span>
+                                <input type="radio" name="base">
+                                <div>
+                                    <span class="base-filtre-name"></span>
+                                    <span class="base-filtre-price"></span>
+                                </div>
+                            </label>
                         </div>
                     </div>
                     <div>
-                        <h3>02 La taille</h3>
-                        <div>
-                            <div>
-                                <p>S · 150 ml</p>
-                                <p>Inclus</p>
-                            </div>
-                            <div>
-                                <p>M · 250 ml</p>
-                                <p>+ 4,00 DH</p>
-                            </div>
-                            <div>
-                                <p>L · 350 ml</p>
-                                <p>+ 8,00 DH</p>
-                            </div>
+                        <div class="h3_dev">
+                            <h3 class="label_h3">02 &nbsp La taille</h3><span>Choix unique</span>
+                        </div>
+                        <div class="flex_row ">
+                            <label class="width2">
+                                <span></span>
+                                <input type="radio">
+                                <div>
+                                    <span class="taille-s-name"></span>
+                                    <span class="taille-s-price"></span>
+                                </div>
+                            </label>
+                            <label class="width2">
+                                <span></span>
+                                <input type="radio">
+                                <div>
+                                    <span class="taille-m-name"></span>
+                                    <span class="taille-m-price"></span>
+                                </div>
+                            </label>
+                            <label class="width2">
+                                <span></span>
+                                <input type="radio">
+                                <div>
+                                    <span class="taille-l-name"></span>
+                                    <span class="taille-l-price"></span>
+                                </div>
+                            </label>
                         </div>
                     </div>
                     <div>
-                        <h3>03 Le lait</h3>
-                        <div>
-                            <div>
-                                <p>Vache</p>
-                                <p>Inclus</p>
-                            </div>
-                            <div>
-                                <p>Avoine</p>
-                                <p>+ 4,00 DH</p>
-                            </div>
-                            <div>
-                                <p>Amande</p>
-                                <p>+ 5,00 DH</p>
-                            </div>
+                        <div class="h3_dev">
+                            <h3 class="label_h3">03 &nbsp Le lait</h3><span>Choix unique</span>
+                        </div>
+                        <div class="flex_row ">
+                            <label class="width3" >
+                                <span></span>
+                                <input type="radio" >
+                                <div >
+                                    <span class="lait-vache-name"></span>
+                                    <span class="lait-vache-price"></span>
+                                </div>
+                            </label>
+                            <label class="width3">
+                                <span></span>
+                                <input type="radio">
+                                <div>
+                                    <span class="lait-avoine-name"></span>
+                                    <span class="lait-avoine-price"></span>
+                                </div>
+                            </label>
+                            <label class="width3">
+                                <span></span>
+                                <input type="radio">
+                                <div>
+                                    <span class="lait-amande-name"></span>
+                                    <span class="lait-amande-price"></span>
+                                </div>
+                            </label>
                         </div>
                     </div>
                     <div>
-                        <h3>04 La touche en plus</h3>
-                        <div>
-                            <div>
-                                <p>Caramel</p>
-                                <p>+ 3,00 DH</p>
-                            </div>
-                            <div>
-                                <p>Vanille</p>
-                                <p>+ 3,00 DH</p>
-                            </div>
+                        <div class="h3_dev">
+                            <h3 class="label_h3">04 &nbsp La touche en plus</h3><span>Plusieurs choix</span>
+                        </div>
+                        <div class="flex_row ">
+                            <label class="width4">
+                                <span></span>
+                                <input type="radio" >
+                                <div>
+                                    <span class="supplements-caramel-name"></span>
+                                    <span class="supplements-caramel-price"></span>
+                                </div>
+                            </label>
+                            <label class="width4">
+                                <span></span>
+                                <input type="radio" >
+                                <div>
+                                    <span class="supplements-vanille-name"></span>
+                                    <span class="supplements-vanille-price"></span>
+                                </div>
+                            </label>
                         </div>
                     </div>
-                    <p>Le prix évolue selon vos choix. Vous pourrez les modifier au récapitulatif.</p>
+                    <p class="le_prix">Le prix évolue selon vos choix. Vous pourrez les modifier au récapitulatif.</p>
                 </div>
-            </div>
-            <div>
-                <div>
-                    <p>Votre création · Café sur mesure</p>
-                    <p>29,00 DH</p>
                 </div>
-                <div>
-                    <button>Ajouter au panier →</button>
+                <div class="total_div">
+                    <div>
+                        <p class="total_txt">Total</p>
+                        <p class="total">00.00</p>
+                    </div>
+                    <div>
+                        <button class="ajou_au_pan_but">Ajouter au panier →</button>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="Récapitulatif">
-            <div>
-                <div><span>01 Personnaliser</span> _ <span>02 Récapitulatif</span></div>
+        <section>
+            <div  class="Récapitulatif hidden">
+                <div><span class="the_second_span">01 Personnaliser</span> _ <span class="the_first_span">02 Récapitulatif</span></div>
                 <div>
-                    <p>VOTRE CRÉATION EST PRÊTE</p>
-                    <h1>Votre moment café,<br>
+                    <p class="votre_coffe_shop">VOTRE CRÉATION EST PRÊTE</p>
+                    <h1 class="votre_pause">Votre moment café,<br>
                         exactement comme vous l’aimez.</h1>
                 </div>
                 <div>
-                    <div>
-                        <div>
-                            <p>LE CAFÉ, À VOTRE FAÇON</p>
-                            <p>01 / 04</p>
+                    <div class="part_1">
+                        <div class="the_first_div">
+                            <p class="image_entete">LE CAFÉ, À VOTRE FAÇON</p>
+                            <p class="image_entete_date">01 / 04</p>
                         </div>
-                        <div>
-                            <img src="./resources/Café M.png" alt="coffee mug">
+                        <div class="part_1_image_container">
+                            <img class="part_1_image" src="./resources/Café M.png" alt="coffee mug">
                         </div>
-                        <div>
-                            <p>Un petit rituel. Beaucoup de vous.</p>
-                            <p>ESPRESSO · M · AVOINE · CARAMEL</p>
+                        <div class="sous_titre">
+                            <p class="sous_titre_h2">Un petit rituel. Beaucoup de vous.</p>
+                            <p class="sous_titre_p">ESPRESSO · M · AVOINE · CARAMEL</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="modifier_div">
                         <div>
-                            <p>Votre café signature</p>
-                            <p>Espresso · M · Avoine · Caramel</p>
+                            <p class="votre_cafe">Votre café signature</p>
+                            <p class="sous_titre_p_p">Espresso · M · Avoine · Caramel</p>
                         </div>
-                        <div>Modifier</div>
+                        <div class="modifier">Modifier</div>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <div>✓  Sélection ajoutée</div>
+                        <div>✓ Sélection ajoutée</div>
                         <p>Votre récapitulatif</p>
                         <p>Une création personnalisée · Quantité : 1</p>
                     </div>
@@ -175,37 +241,42 @@
                     <div>
                         <div>
                             <p>Base · </p><span>M / 250 ml</span>
-                            <span>18,00</span> <p> HD</p>
+                            <span>18,00</span>
+                            <p> HD</p>
                         </div>
                         <div>
                             <p>Taille · </p><span>M / 250 ml</span>
-                            <span>4,00</span> <p> HD</p>
+                            <span>4,00</span>
+                            <p> HD</p>
                         </div>
                         <div>
                             <p>Lait · </p><span>Avoine</span>
-                            <span>4,00</span> <p> HD</p>
+                            <span>4,00</span>
+                            <p> HD</p>
                         </div>
                         <div>
                             <p>Supplément · </p> <span>Caramel</span>
-                            <span>3.00</span> <p> HD</p>
+                            <span>3.00</span>
+                            <p> HD</p>
                         </div>
                     </div>
                     <div>
-                        <p>Total</p><span>29,00</span><p> DH</p>
+                        <p>Total</p><span>29,00</span>
+                        <p> DH</p>
                         <p>Prix de cette sélection · aucun paiement effectué.</p>
                     </div>
-                    
+
                     <div>
-                        <button>Créer un autre café   →</button>
+                        <button>Créer un autre café →</button>
                     </div>
-                    <div>✓  Votre sélection reste modifiable à tout moment.</div>
+                    <div>✓ Votre sélection reste modifiable à tout moment.</div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <div>BRUME — Le goût de votre rythme.</div>
-        <div>Une création unique, la vôtre.</div>
+        <div class="footer_div">BRUME — Le goût de votre rythme.</div>
+        <div class="footer_div_hidden">Une création unique, la vôtre.</div>
     </footer>
 </body>
 
