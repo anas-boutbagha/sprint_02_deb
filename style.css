@@ -512,7 +512,10 @@ footer{
         font-size: small;
     }
 }
-
+label>span{
+    margin-bottom: 23px;
+    margin-left: 10px;
+}
 @media screen and (min-width:800px){
 .Personnaliser {
     gap: 60px;

@@ -49,22 +49,21 @@ let selection2 = document.querySelectorAll(".width2");
 let selection3 = document.querySelectorAll(".width3");
 let selection4 = document.querySelectorAll(".width4");
 let childs4 = document.querySelectorAll('.width4 > input[type="radio"]')
-// console.log(childs4)  
 
 
 
+ 
 
 function add_a_selaction_class(i) {
     // console.log(i) // currentTarget vs target
     i.currentTarget.classList.add("option_choisi")
-
+    
 }
     
 function remove_a_selaction_class1() {
  Array.from(selection1).forEach(item => {
   item.classList.remove("option_choisi")
  });
-
 }
 
 function remove_a_selaction_class2() {
@@ -101,16 +100,46 @@ Array.from(selection3).forEach((item, i) => {
   item.addEventListener("click",remove_a_selaction_class3)
   item.addEventListener("click",add_a_selaction_class)
 });
-console.log(selection4)
+
 Array.from(selection4).forEach((item, i) => { 
   item.addEventListener("click",toggle_a_selaction_class)
-  console.log(childs4[i])
+  
   childs4[i].addEventListener("click", (e)=>{
       e.stopPropagation();
     })
 });
 
 
+const btns = document.querySelectorAll('label')
 
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+      if(!btn.classList.contains('option_choisi'))
+      {
+        btn.querySelector('span').innerText = ""
+      }
+      console.log(!btn.classList.contains('option_choisi'));
+      
+      if(btn.classList.contains('option_choisi'))
+      {
+        btn.querySelector('span').innerText = "✓"
+      }
+
+  })
+})
+
+      let cnt_aid1=0
+      let cnt_aid2=0
+      let cnt=0
+btns.forEach(btn => {
+      if(btn.classList.contains('option_choisi'))
+      {
+       cnt_aid1 = btn.querySelector('div > span:last-child').innerHTML
+       cnt_aid2 = cnt_aid1.replace("DH", "")
+      }
+      console.log(cnt_aid1);
+      
+     document.querySelector(".total").textContent = cnt
+  })
 
 
