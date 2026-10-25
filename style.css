@@ -323,7 +323,9 @@ label>div {
     font-size: 30px;
     margin-left: 15px;
 }
-
+.total_txt_02{
+  font-size: 25px;
+}
 .ajou_au_pan_but {
     font-family: "DM_Sans_Medium";
     font-size: medium;
@@ -344,11 +346,12 @@ label>div {
 /* secont_page */
 
 .Récapitulatif {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 40px;
 }
-
+.all_the_stuff{
+    display: flex;
+    flex-wrap: wrap;
+}
 .sous_titre_p_p {
     font-family: "DMSans_18pt-Regular";
     font-weight: 400;
@@ -412,35 +415,101 @@ footer {
     display: none;
 }
 
-.container {
-    width: 200px;
-    height: 30px;
-}
-
-.container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.container input {
-    position: absolute;
+label {
     cursor: pointer;
 }
 
+.récapitulatif_div {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #DFD5C8;
+    width: 100%;
+    border-radius: 15px;
+}
 
+.sélection_ajou {
+    color: #394B32;
+    width: 35%;
+    padding: 5px;
+    padding-bottom: 8px;
+    border-radius: 15px;
+    background-color: #E9EEDC;
+    font-family: "DM_Sans_Medium";
+    font-size: 13px;
+    padding-left: 10px;
+}
 
+.Votre_récapitulatif {
+    font-family: "DM_Sans_Medium";
+    font-weight: 500;
+    font-size: 28px;
+    color: #30291F;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
 
-
-
-
-
-
-
-
-
+.style01 {
+    font-family: "DM_Sans_Medium";
+    font-weight: 00;
+    font-size: 13px;
+    color: #796A59;
+    margin-top: 15px;
+}
+.recette{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.recette_txt{
+   font-family: "DMSans_18pt-Regular"; 
+    font-size: medium;
+    color: #796A59;
+}
+.black_color{
+    color: #000;
+}
+.hr_0{
+    margin-top: 15px;
+    height: 2px;
+    background-color: #796A59;
+}
+.hr_1{
+    margin-top: 15px;
+    height: 2px;
+    background-color: #796A59;
+}
+.last_divs{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.last_div_but{
+    height: 50px;
+    width: 90%;
+    background-color: #394B32;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: "DM_Sans_Medium";
+    font-size: medium;
+}
+.last_div_votre{
+    height: 50px;
+    width: 90%;
+    background-color: #E9EEDC;
+    border-radius: 10px;
+    color: #796A59;
+    font-family: "DM_Sans_Medium";
+    font-size: small;
+    padding-top: 14px;
+    margin-left: 17px;
+}
 .nav_bar_02 {
     width: 100%;
     height: 40px;
@@ -574,5 +643,8 @@ label>span {
         .footer_div_hidden {
             display: flex;
         }
+    }
+    .récapitulatif_div{
+        width: 50%;
     }
 }
