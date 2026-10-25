@@ -133,7 +133,33 @@ Array.from(selection4).forEach((item, i) => {
 });
 
 let btns= document.querySelectorAll('label')
+let body_btn= document.querySelector('.part_2')
+let total =Array
+// console.log(total);
+// total = Number("1")
+// // total = Number("1") =1
+// console.log(total);
+// var myStr = "45.99DH";
+// var num = parseFloat(myStr);
+// total += num
+// // total += Number("31DH") =32
+// console.log(total);
+body_btn.addEventListener("click", toStringl_count =>{
+   btns.forEach(btn => {
+    
+    if(btn.classList.contains('option_choisi'))
+      {
+        total=parseInt(btn.querySelector('div>span:last-child'));
+        console.log(total);
+        
+      }
+   });
 
-
-       
-
+})
+let selectedConfig = {
+  base: null,
+  taille: null,
+  lait: null,
+  caramel: null,
+  vanille: null
+};
