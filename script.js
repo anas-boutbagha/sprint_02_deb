@@ -134,32 +134,57 @@ Array.from(selection4).forEach((item, i) => {
 
 let btns= document.querySelectorAll('label')
 let body_btn= document.querySelector('.part_2')
-let total =Array
-// console.log(total);
-// total = Number("1")
-// // total = Number("1") =1
-// console.log(total);
-// var myStr = "45.99DH";
-// var num = parseFloat(myStr);
-// total += num
-// // total += Number("31DH") =32
-// console.log(total);
-body_btn.addEventListener("click", toStringl_count =>{
-   btns.forEach(btn => {
-    
-    if(btn.classList.contains('option_choisi'))
-      {
-        total=parseInt(btn.querySelector('div>span:last-child'));
-        console.log(total);
-        
-      }
-   });
 
+
+let all_prices_spans = document.querySelectorAll("label > div > span:last-child")
+let the_menu_div = document.querySelector('.part_2')
+let total_div = document.querySelector('.total')
+let total_div2 = document.querySelector('.total2')
+
+the_menu_div.addEventListener('click',total_count => {
+  let total=0
+for (let i = 0; i < all_prices_spans.length; i++) {  
+  if(btns[i].classList.contains('option_choisi')){
+    let aid = parseInt(all_prices_spans[i].textContent)
+    total += aid
+    aid = 0 
+  }
+total_div.textContent = total + " DH"
+total_div2.textContent = total + " DH"
+}
 })
+
+let page01 = document.querySelector('.Personnaliser')
+let page02 = document.querySelector('.Récapitulatif')
+
+
+let swich_buton = document.querySelectorAll('.ajou_au_pan_but')
+for (let i = 0; i < swich_buton.length; i++) {
+swich_buton[i].addEventListener('click', page_swich => {
+  page01.classList.toggle('hidden')
+  page02.classList.toggle('hidden')
+})
+}
+
 let selectedConfig = {
   base: null,
   taille: null,
   lait: null,
   caramel: null,
   vanille: null
-};
+}
+
+
+the_menu_div.addEventListener('click',total_count => {
+  // names
+  let name_selected = document.querySelectorAll('.name')
+  for (let i = 0; i < name_selected.length; i++) {
+     if (name_selected[i].classList.contains('option_choisi')) {
+      let aid = document.querySelectorAll
+      selectedConfig.base 
+     }    
+  }
+ 
+
+  
+})

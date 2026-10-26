@@ -381,7 +381,10 @@ label>div {
     font-family: "DM_Sans_Medium";
     font-size: 1em;
     color: #394B32;
-
+    background-color: inherit;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 55px;
 }
 
 
@@ -508,7 +511,7 @@ label {
     font-family: "DM_Sans_Medium";
     font-size: small;
     padding-top: 14px;
-    margin-left: 17px;
+    margin-left: 23px;
 }
 .nav_bar_02 {
     width: 100%;
@@ -646,5 +649,8 @@ label>span {
     }
     .récapitulatif_div{
         width: 50%;
+    }
+    .last_div_votre{
+        margin-left: 33px;
     }
 }
