@@ -245,7 +245,7 @@ total_stuff()
 let the_name_input = document.querySelector('.Nom')
 the_name_input.addEventListener('focusout', ()=>{
   let input_value = the_name_input.value
-  let name_regex = /^([a-z\d]{5,24})$/i ;
+  let name_regex = /^([a-z\d]{3,24})$/i ;
   if (!name_regex.test(input_value) && !nothing.test(input_value)) {
     alert("entrer-vous une nom valid!!!")
     the_name_input.value = null
