@@ -239,13 +239,14 @@ total_stuff()
 
 
 // validation des carte bancair ===>
+  let nothing = /^\s*$/
 // nom validation
 
 let the_name_input = document.querySelector('.Nom')
 the_name_input.addEventListener('focusout', ()=>{
   let input_value = the_name_input.value
   let name_regex = /^([a-z\d]{5,24})$/i ;
-  if (!name_regex.test(input_value)) {
+  if (!name_regex.test(input_value) && !nothing.test(input_value)) {
     alert("entrer-vous une nom valid!!!")
     the_name_input.value = null
   }
@@ -257,7 +258,7 @@ let the_prenom_input = document.querySelector('.Prenom')
 the_prenom_input.addEventListener('focusout', ()=>{
   let input_value = the_prenom_input.value
   let prenom_regex = /^([a-z\d]{5,24})$/i ;
-  if (!prenom_regex.test(input_value)) {
+  if (!prenom_regex.test(input_value) && !nothing.test(input_value)) {
     alert("entrer-vous une Prenom valid!!!")
     the_prenom_input.value = null
   }
@@ -270,7 +271,7 @@ the_Card_number_input.addEventListener('focusout', ()=>{
   let input_value = the_Card_number_input.value
   let Card_number_regex_visa = /^4[0-9]{12}(?:[0-9]{3})?$/ ;
   let Card_number_regex_mastercard = /^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$/;
-  if (!Card_number_regex_visa.test(input_value) && !Card_number_regex_mastercard.test(input_value)) {
+  if (!Card_number_regex_visa.test(input_value) && !Card_number_regex_mastercard.test(input_value) && !nothing.test(input_value)) {
     alert("entrer-vous une Carte de credit nombre valid!!!")
     the_Card_number_input.value = null
   }
@@ -282,7 +283,7 @@ let the_Card_CCV_input = document.querySelector('.CCV')
 the_Card_CCV_input.addEventListener('focusout', ()=>{
   let input_value = the_Card_CCV_input.value
   let Card_CCV_regex = /^[0-9]{3,4}$/ ;
-  if (!Card_CCV_regex.test(input_value) && !Card_CCV_regex_mastercard.test(input_value)) {
+  if (!Card_CCV_regex.test(input_value) && !nothing.test(input_value)) {
     alert("entrer-vous une CCV nombre valid!!!")
     the_Card_CCV_input.value = null
   }
@@ -294,7 +295,7 @@ let the_Card_EX_date_input = document.querySelector('.EX_date')
 the_Card_EX_date_input.addEventListener('focusout', ()=>{
   let input_value = the_Card_EX_date_input.value
   let Card_EX_date_regex = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/ ;
-  if (!Card_EX_date_regex.test(input_value) && !Card_EX_date_regex_mastercard.test(input_value)) {
+  if (!Card_EX_date_regex.test(input_value) && !nothing.test(input_value)) {
     alert("entrer-vous une EX_date nombre valid!!!")
     the_Card_EX_date_input.value = null
   }
