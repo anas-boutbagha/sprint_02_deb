@@ -243,4 +243,5 @@ the_menu_div.addEventListener('click', total_count => {
   help01.textContent = selectedConfigprice.two + ",00 DH"
 })
 
-
+// let blabla="hh"
+// `item.innerHTML= <p> hna kayt7t fih html o vars blasthom hka ${blabla}<p>`
