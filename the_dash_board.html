@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the_dash_board</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js" defer></script>
 </head>
 
 <body>
+    <marquee class="marquee" behavior="scroll" direction="left" scrollamount="5" scrollspeed="0.1">
+        Du grain à votre tasse. Un café qui vous ressemble.
+    </marquee>
     <header class="header">
         <div class="the_header_img_div">
             <img id="nav_bar_02_id" class="the_header_img" src="./resources/Signature de marque.png"
@@ -15,6 +20,7 @@
         </div>
         <div class="pannier_img_div">
             <div>
+                <img class="zoom_ico" src="./resources/zoom-in.png" alt="search_btn">
                 <img class="pannier_img" src="./resources/Group.png" alt="pannier des produit">
                 <div id="call_order">0</div>
             </div>
@@ -24,8 +30,62 @@
         </div>
     </header>
     <main>
+        <div class="modal hiding">
+            <div class="search_bar_div">
+                <label for="search_bar"></label>
+                <input type="search" name="search_bar" id="search_bar">
+            </div>
 
-        
+        </div>
+        <section class="main_sec">
+            <div class="card_choosed">
+
+
+            </div>
+        </section>
+
+        <section class="total">
+                <p class="total_txt">Total HT</p>
+                <p class="very_total">00.00</p>
+                <p class="total_txt">T.V.A</p>
+                <p class="t_v_a">00.00</p>
+                <p class="total_txt">Total TTC</p>
+                <p class="ttc">00.00</p>
+        </section>
+
+        <section class="BA_Data">
+           <form >
+            <div>
+                <label >
+                    Nom:
+                    <input class="Nom" type="text">
+                </label>
+                <label >
+                    Prenom: 
+                    <input class="Prenom" type="text">
+                </label>
+            </div>
+            <div>
+                <label >
+                    Card_number:
+                    <input class="Card_number" type="text">
+                </label>
+            </div>
+            <div>
+                <label >
+                    CCV :
+                    <input class="CCV" type="text">
+                </label>
+                <label >
+                    EX_date :
+                    <input class="EX_date" type="text">
+                </label>
+            </div>
+            <div>
+                <input type="submit" value="submit les informations">
+            </div>
+           </form>
+        </section>
     </main>
     <footer>
         <div class="footer_div">BRUME — Le goût de votre rythme.</div>
