@@ -29,63 +29,78 @@
             </div>
         </div>
     </header>
+    <div class="modal hiding">
+        <div class="search_barre_div">
+            <h1 class="search_barre_h1">-----search barre------</h1>
+        </div>
+        <div class="search_bar_div">
+            <label for="search_bar">
+                <input class="s_b" type="search" name="search_bar" id="search_bar"
+                    placeholder="  search here..."></label>
+        </div>
+
+    </div>
     <main>
-        <div class="modal hiding">
-            <div class="search_bar_div">
-                <label for="search_bar"></label>
-                <input type="search" name="search_bar" id="search_bar">
+        <div class="the_big_div_1">
+            <section class="main_sec">
+                <div class="les_option_choisie">
+                    <h1 class="les_option_choisie_h1">les option choisie</h1>
+                </div>
+                <div class="card_choosed">
+                </div>
+            </section>
+            <div class="les_option_choisie">
+                <h1 class="les_option_choisie_h1">les totals: </h1>
             </div>
+            <section class="total">
+                <p class="total_txt">Total HT: </p>
+                <p class="very_total total_txt2">00.00</p>
+                <p class="total_txt">T.V.A: </p>
+                <p class="t_v_a total_txt2">00.00</p>
+                <p class="total_txt">Total TTC: </p>
+                <p class="ttc total_txt2">00.00</p>
+            </section>
 
         </div>
-        <section class="main_sec">
-            <div class="card_choosed">
+        <div class="the_big_div_2">
 
-
-            </div>
-        </section>
-
-        <section class="total">
-                <p class="total_txt">Total HT</p>
-                <p class="very_total">00.00</p>
-                <p class="total_txt">T.V.A</p>
-                <p class="t_v_a">00.00</p>
-                <p class="total_txt">Total TTC</p>
-                <p class="ttc">00.00</p>
-        </section>
-
-        <section class="BA_Data">
-           <form >
-            <div>
-                <label >
-                    Nom:
-                    <input class="Nom" type="text">
-                </label>
-                <label >
-                    Prenom: 
-                    <input class="Prenom" type="text">
-                </label>
-            </div>
-            <div>
-                <label >
-                    Card_number:
-                    <input class="Card_number" type="text">
-                </label>
-            </div>
-            <div>
-                <label >
-                    CCV :
-                    <input class="CCV" type="text">
-                </label>
-                <label >
-                    EX_date :
-                    <input class="EX_date" type="text">
-                </label>
-            </div>
-            <div>
-                <input type="submit" value="submit les informations">
-            </div>
-           </form>
-        </section>
+            <section class="BA_Data">
+                <div class="les_option_choisie">
+                    <h1 class="les_option_choisie_h1">les information bancaire</h1>
+                </div>
+                <form class="the_form">
+                    <div class="the_form_div1">
+                        <label class="boldy2 label_s1">
+                            Nom: 
+                            <input class="Nom style_input" type="text" placeholder="  Nom: XXXX ...">
+                        </label>
+                        <label class="boldy2">
+                            Prenom: 
+                            <input class="Prenom style_input" type="text" placeholder="  Preom: XXXX ...">
+                        </label>
+                    </div>
+                    <div class="the_form_div2">
+                        <label class="boldy2">
+                            Card_number: <br>
+                            <input class="Card_number style_input3" type="text" placeholder="  C.C.N:    XXXX XXXX XXXX XXXX">
+                        </label>
+                    </div>
+                    <div class="the_form_div3">
+                        <label class="boldy2">
+                            CCV :
+                            <input class="CCV style_input2" type="text" placeholder="       000   ">
+                        </label>
+                        <label class="boldy2">
+                            EX_date :
+                            <input class="EX_date style_input2" type="text" placeholder="       00/00   ">
+                        </label>
+                    </div>
+                    <div>
+                        <input class="style_input_submit" type="submit" value="submit les informations">
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="footer_div">BRUME — Le goût de votre rythme.</div>

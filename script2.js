@@ -27,10 +27,10 @@ if (val_id=="c2"||val_id=="c3"||val_id=="c8") {
      let template = `<div class="choice_card " id="${val_id}">
                     <div class="c_c_img"><img src="./resources/${img_src}" alt="${img_alt}"></div>
                     <div class="first_div">
-                        <p>name: </p>     <span>${val_name}</span>
-                        <p>category: </p> <span>${val_category}</span>
-                        <p>prix: </p>     <span class="val_price">${val_price} HD</span>
-                        <p>total prix:</p><span class="selection_total">${selection_total}</span>
+                        <p class="boldy2">name: </p>     <span class="non_boldy2">${val_name}</span>
+                        <p class="boldy2">category: </p> <span class="non_boldy2">${val_category}</span>
+                        <p class="boldy2">prix: </p>     <span class="val_price non_boldy2">${val_price} HD</span>
+                        <p class="boldy2">total prix:</p><span class="selection_total price_tt2">${selection_total}</span>
                     </div>
                     <div class="second_div">
                         <img class="cross" src="./resources/cross.png" alt="cross">
@@ -46,10 +46,10 @@ else
  { let template = `<div class="choice_card hiding" id="${val_id}">
                     <div class="c_c_img"><img src="./resources/${img_src}" alt="${img_alt}"></div>
                     <div class="first_div">
-                        <p>name: </p>     <span>${val_name}</span>
-                        <p>category: </p> <span>${val_category}</span>
-                        <p>prix: </p>     <span class="val_price">${val_price} HD</span>
-                        <p>total prix:</p><span class="selection_total">${selection_total}</span>
+                        <p class="boldy2">name: </p>     <span class="non_boldy2">${val_name}</span>
+                        <p class="boldy2">category: </p> <span class="non_boldy2">${val_category}</span>
+                        <p class="boldy2">prix: </p>     <span class="val_price non_boldy2">${val_price} HD</span>
+                        <p class="boldy2">total prix:</p><span class="selection_total price_tt2">${selection_total}</span>
                     </div>
                     <div class="second_div">
                         <img class="cross" src="./resources/cross.png" alt="cross">
@@ -80,11 +80,13 @@ for (let i = 0; i < coffeeProducts.length; i++) {
 
   if (val_id=="c2"||val_id=="c3"||val_id=="c8"){
     let template = `<div class="choice_card_modal hiding" id="${val_id}">
-                    <div class="c_c_img_modal"><img src="./resources/${img_src}" alt="${img_alt}"></div>
+                    <div class="c_c_img_modal">
+                    <img src="./resources/${img_src}" alt="${img_alt}">
+                    </div>
                     <div class="first_div_modal">
-                        <p>name: </p>     <span class="name_spans">${val_name}</span>
-                        <p>category: </p> <span>${val_category}</span>
-                        <p>prix: </p>     <span>${val_price} HD</span>
+                        <p class="boldy">name: </p>     <span class="name_spans non_boldy">${val_name}</span>
+                        <p class="boldy">category: </p> <span class="non_boldy">${val_category}</span>
+                        <p class="boldy">prix: </p>     <span class="non_boldy">${val_price} HD</span>
                     </div>
                     </div>`
   
@@ -93,11 +95,13 @@ for (let i = 0; i < coffeeProducts.length; i++) {
   }
   else{
     let template = `<div class="choice_card_modal " id="${val_id}">
-                    <div class="c_c_img_modal"><img src="./resources/${img_src}" alt="${img_alt}"></div>
+                    <div class="c_c_img_modal">
+                    <img src="./resources/${img_src}" alt="${img_alt}">
+                    </div>
                     <div class="first_div_modal">
-                        <p>name: </p>     <span class="name_spans">${val_name}</span>
-                        <p>category: </p> <span>${val_category}</span>
-                        <p>prix: </p>     <span>${val_price} HD</span>
+                        <p class="boldy">name: </p>     <span class="name_spans non_boldy">${val_name}</span>
+                        <p class="boldy">category: </p> <span class="non_boldy">${val_category}</span>
+                        <p class="boldy">prix: </p>     <span class="non_boldy price_tt">${val_price} HD</span>
                     </div>
                     </div>`
   
