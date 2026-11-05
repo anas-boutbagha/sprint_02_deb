@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
  
-
+fieldset{
+    background-color: #ffffff;
+}
 .marquee {
     background-color: #394B32;
     font-family: "DMSans_18pt-Regular";
