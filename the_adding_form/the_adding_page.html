@@ -46,7 +46,7 @@
                     <legend class="fieldset-legend ">Nom de la boisson:</legend>
                     <input type="text" class="input w-11/12  nom_inp" placeholder="  Type here" /><span
                         class="error-msg hidden text-red-500">Saisisez-vous un nom valid</span>
-                    <p class="label">Obligatoire</p>
+                    <p class="label">Obligatoire </p>
 
                 </fieldset>
                 <fieldset class="fieldset">
@@ -97,8 +97,8 @@
                             <input type="number" class="input promotion_inp  w-30"
                                 placeholder="Type a percentage between 1% to 100%" min="1" max="100"
                                 title="Must be between be 1% to 100%" />
-                            <p>%</p>
-                            <span class="error-msg hidden text-red-500">Saisisez-vous un pourcentage valid</span>
+                            <span>%</span> 
+                            <p class="error-msg hidden text-red-500">Saisisez-vous un pourcentage valid</p>
                         </label>
                     </fieldset>
                     <fieldset>
@@ -121,14 +121,15 @@
                         <option>Éthiopie</option>
                         <option>Brésil</option>
                         <option>Mélange Maison</option>
+                        <span class="error-msg hidden text-red-500">Saisisez-vous une date valid</span>
                     </select>
                     <span class="label">Obligatoire</span>
                 </fieldset>
                 <fieldset>
                     <div class="w-full max-w-xs">
-                        <legend class="fieldset-legend">Origine des grains</legend>
-                        <input type="range" min="0" max="10" value="0" class="range range-xs" step="1" />
-                        <div class="flex justify-between px-2.5 mt-2 text-xs">
+                        <legend class="fieldset-legend">Intensite</legend>
+                        <input type="range" min="1" max="10" value="0" class="range range-xs" step="1" />
+                        <div class="flex justify-between px-1 mt-0.5 text-xs">
                             <span>|</span>
                             <span>|</span>
                             <span>|</span>
@@ -140,7 +141,7 @@
                             <span>|</span>
                             <span>|</span>
                         </div>
-                        <div class="flex justify-between px-2.5 mt-2 text-xs">
+                        <div class="flex justify-between px-1 mt-2 text-xs">
                             <span>1</span>
                             <span>2</span>
                             <span>3</span>
@@ -154,16 +155,16 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                <fieldset class="fieldset fieldset_cl bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend">Température ?</legend>
                     <label class="label">
-                        <input type="radio" name="radio2" class="radio promo_radio1" checked="checked" />
+                        <input type="radio" name="radio2" class="radio promo_radio1" checked="checked" value="it's hot"/>
                         it's hot
-                        <input type="radio" name="radio2" class="radio promo_radio2" />
+                        <input type="radio" name="radio2" class="radio promo_radio2" value="it's cold" />
                         it's cold
                     </label>
                 </fieldset>
-                <fieldset class="fieldset fe1 bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                <fieldset class="fieldset fieldset_size fe1 bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend">Tailles disponibles</legend>
                     <label class="label">
                         <input type="radio" name="radio_s" checked="checked" class="checkbox radio_s" value="Small"/>
@@ -178,7 +179,7 @@
                         Large
                     </label>
                 </fieldset>
-                <fieldset class="fieldset fe2 bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                <fieldset class="fieldset fieldset_lait fe2 bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend">Options de lait</legend>
                     <label class="label">
                         <input type="radio" name="radio_m" checked="checked" class="checkbox radio_m" value="no milk" />
@@ -201,22 +202,18 @@
                         Amande
                     </label>
                 </fieldset>
-                <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                <fieldset class="fieldset fieldset_sup bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend">Suppléments </legend>
                     <label class="label">
-                        <input type="radio" name="radio_sup" checked="checked" class="checkbox radio_sup" value="no supplement" />
-                        Sans
-                    </label>
-                    <label class="label">
-                        <input  type="radio" name="radio_sup" class="checkbox radio_sup" value="Vanille"/>
+                        <input  type="checkbox" name="checkbox_sup" class="checkbox checkbox_sup" value="Vanille"/>
                         Vanille
                     </label>
                     <label class="label">
-                        <input  type="radio" name="radio_sup" class="checkbox radio_sup" value="Caramel"/>
+                        <input  type="checkbox" name="checkbox_sup" class="checkbox checkbox_sup" value="Caramel"/>
                         Caramel
                     </label>
                     <label class="label">
-                        <input  type="radio" name="radio_sup" class="checkbox radio_sup" value="Noisette"/>
+                        <input  type="checkbox" name="checkbox_sup" class="checkbox checkbox_sup" value="Noisette"/>
                         Noisette
                     </label>
                 </fieldset>
@@ -229,7 +226,10 @@
             </section>
             <section class="sec_03 hidden">
                 <div class="recapulative ">
+                    <div class=" w-full flex justify-center mt-6 mb-3"> <p class="text-2xl font-bold text-#394B32 " >VOTRE PRODUIT: </p> </div>
+                  <div class="normaldiv">
 
+                  </div>
                 </div>
                 <div class="relative mt-24">
                     <input type="submit" value="submit" class="absolute right-0 bottom-0 mr-8 mt-4 btn btn-primary">
