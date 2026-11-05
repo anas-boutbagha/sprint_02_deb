@@ -143,7 +143,7 @@ function showcase_error(input) {
 }
 function name_verif() {
     let name_inp = document.querySelector('.nom_inp')
-    const name_regex = /^(?=.{3,50}$)[A-Za-zÀ-ÖØ-öø-ÿŒœ0-9]+(?:[ '’\-&.][A-Za-zÀ-ÖØ-öø-ÿŒœ0-9]+)*$/;
+    const name_regex = /^(?=.{3,50}$)[A-Za-zÀ-ÖØ-öø-ÿŒœ]+(?:[ '’\-&.][A-Za-zÀ-ÖØ-öø-ÿŒœ]+)*$/;
     name_inp.addEventListener('focusout', () => {
         if (!name_inp.value) {
             return Error_show(name_inp, 'Product name is required');
