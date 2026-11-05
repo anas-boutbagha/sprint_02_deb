@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./adding.css">
     <link rel="stylesheet" href="./style3.css">
     <script src="./script3.js" defer></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -40,24 +41,28 @@
                     <li class="step text-[12px] text-[#796A59] w-auto lis3">Récapitulatif</li>
                 </ul>
             </div>
-            <section class="space-y-5 p-5 sec_01">
-                <fieldset class="fieldset ">
-                    <legend class="fieldset-legend">Nom de la boisson:</legend>
-                    <input type="text" required class="input w-11/12" placeholder="  Type here" />
-                    <p class="label">Obligatoire</p>
+            <section class="space-y-5 p-5 sec_01 ">
+                <fieldset class="fieldset nom_lbl ">
+                    <legend class="fieldset-legend ">Nom de la boisson:</legend>
+                    <input type="text" class="input w-11/12  nom_inp" placeholder="  Type here" /><span
+                        class="error-msg hidden text-red-500">Saisisez-vous un nom valid</span>
+                    <p class="label">Obligatoire </p>
+
                 </fieldset>
                 <fieldset class="fieldset">
                     <legend class="fieldset-legend">prix de la boisson:</legend>
                     <label class="input ">
-                        <input attributs required min="0" step="0.01" type="number" class="input w-11/12 "
+                        <input type="number" min="0" step="0.50" class="input w-11/12 price_inp "
                             placeholder="  price here" />
                         <p>DH</p>
+                        <span class="error-msg hidden text-red-500">Saisisez-vous une prix valid</span>
                     </label>
                     <p class="label">Obligatoire</p>
                 </fieldset>
                 <fieldset class="fieldset">
                     <legend class="fieldset-legend">Your description </legend>
-                    <textarea class="textarea h-24 w-11/12" placeholder="  Description "></textarea>
+                    <textarea class="textarea h-24 w-11/12 discr_inp" placeholder="  Description "></textarea>
+                    <span class="error-msg hidden text-red-500">Saisisez-vous une prix valid</span>
                 </fieldset>
                 <fieldset>
                     <legend class="fieldset-legend">URL de l'image du produit </legend>
@@ -69,59 +74,62 @@
                                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                             </g>
                         </svg>
-                        <input type="url" placeholder="https://share.google/elhINFaENCNoQG3m8"
+
+                        <input class="url_inp" type="url" placeholder="https://share.google/elhINFaENCNoQG3m8"
                             pattern="^(https?://)?([a-zA-Z0-9]([a-zA-Z0-9\-].*[a-zA-Z0-9])?\.)+[a-zA-Z].*$"
                             title="Must be valid URL" />
-
+                        <span class="error-msg hidden text-red-500">Saisisez-vous une url valid</span>
                     </label>
-                    <p class="validator-hint">Must be valid URL</p>
                 </fieldset>
-                <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                <fieldset class="fieldset_btns bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend">Is it en promotion ?</legend>
                     <label class="label">
-                        <input type="radio" name="radio-1" class="radio promo_radio1" checked="checked" />
-                        No it isn't
-                        <input type="radio" name="radio-1" class="radio promo_radio2" />
-                        Yes it is
+                        <input type="radio" checked name="radio_1" class="radio promo_radio1" />
+                        <p>No it isn't</p>
+                        <input type="radio" name="radio_1" class="radio promo_radio2" />
+                        <p>Yes it is</p>
                     </label>
                 </fieldset>
                 <div class="hidden flex justify-around promotion_sec">
                     <fieldset>
                         <legend class="fieldset-legend">promotion percentage</legend>
                         <label class="label">
-                            <input type="number" required class="input  w-30" required
+                            <input type="number" class="input promotion_inp  w-30"
                                 placeholder="Type a percentage between 1% to 100%" min="1" max="100"
                                 title="Must be between be 1% to 100%" />
-                            <p>%</p>
-                            <p class="-hint">Must be between be 1% to 100%</p>
+                            <span>%</span> 
+                            <p class="error-msg hidden text-red-500">Saisisez-vous un pourcentage valid</p>
                         </label>
                     </fieldset>
                     <fieldset>
                         <legend class="fieldset-legend">date de fin du promotion</legend>
-                        <input type="date" class="input " required/>
+                        <input type="date" class="input date_inp" />
+                        <span class="error-msg hidden text-red-500">Saisisez-vous une date valid</span>
                     </fieldset>
                 </div>
                 <div class="relative mt-24">
-                    <button class="btn btn-primary absolute right-0 bottom-0 mr-8 mt-4 nextbtn1">next</button>
+                    <button class="btn btn-primary absolute right-0 bottom-0 mr-8 mt-4 nextbtn1"
+                        type="button">next</button>
                 </div>
             </section>
-            <section class="sec_02 space-y-5 p-5 sec_01 hidden">
+            <section class="sec_02 space-y-5 p-5 hidden">
                 <fieldset class="fieldset">
                     <legend class="fieldset-legend">Origine des grains</legend>
-                    <select class="select">
+                    <select class="select select_uu">
                         <option disabled selected>Origines</option>
                         <option>Colombie</option>
                         <option>Éthiopie</option>
                         <option>Brésil</option>
                         <option>Mélange Maison</option>
+                        <span class="error-msg hidden text-red-500">Saisisez-vous une date valid</span>
                     </select>
                     <span class="label">Obligatoire</span>
                 </fieldset>
                 <fieldset>
                     <div class="w-full max-w-xs">
-                        <legend class="fieldset-legend">Origine des grains</legend>
-                        <input type="range"  min="0" max="10" value="0" class="range range-xs" step="1" />
-                        <div class="flex justify-between px-2.5 mt-2 text-xs">
+                        <legend class="fieldset-legend">Intensite</legend>
+                        <input type="range" min="1" max="10" value="0" class="range range-xs" step="1" />
+                        <div class="flex justify-between px-1 mt-0.5 text-xs">
                             <span>|</span>
                             <span>|</span>
                             <span>|</span>
@@ -133,7 +141,7 @@
                             <span>|</span>
                             <span>|</span>
                         </div>
-                        <div class="flex justify-between px-2.5 mt-2 text-xs">
+                        <div class="flex justify-between px-1 mt-2 text-xs">
                             <span>1</span>
                             <span>2</span>
                             <span>3</span>
@@ -147,62 +155,86 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                <fieldset class="fieldset fieldset_cl bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend">Température ?</legend>
                     <label class="label">
-                        <input type="radio" name="radio-1" class="radio promo_radio1" checked="checked" />
+                        <input type="radio" name="radio2" class="radio promo_radio1" checked="checked" value="it's hot"/>
                         it's hot
-                        <input type="radio" name="radio-1" class="radio promo_radio2" />
+                        <input type="radio" name="radio2" class="radio promo_radio2" value="it's cold" />
                         it's cold
                     </label>
                 </fieldset>
-                <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                <fieldset class="fieldset fieldset_size fe1 bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend">Tailles disponibles</legend>
-                    <label class="label" >
-                        <input type="checkbox" checked="checked" class="checkbox" />
+                    <label class="label">
+                        <input type="radio" name="radio_s" checked="checked" class="checkbox radio_s" value="Small"/>
                         Small
-                        <input type="checkbox" class="checkbox" />
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="radio_s" class="checkbox radio_s" value="Medium" />
                         Medium
-                        <input type="checkbox" class="checkbox" />
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="radio_s" class="checkbox radio_s" value="Large" />
                         Large
                     </label>
                 </fieldset>
-                <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                <fieldset class="fieldset fieldset_lait fe2 bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend">Options de lait</legend>
                     <label class="label">
-                        <input type="checkbox" checked="checked" class="checkbox" />
+                        <input type="radio" name="radio_m" checked="checked" class="checkbox radio_m" value="no milk" />
+                        Sans
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="radio_m" class="checkbox radio_m" value="Vache" />
                         Vache
-                        <input type="checkbox" class="checkbox" />
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="radio_m" class="checkbox radio_m" value="Avoine" />
                         Avoine
-                        <input type="checkbox" class="checkbox" />
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="radio_m" class="checkbox radio_m" value="Soja" />
                         Soja
-                        <input type="checkbox" class="checkbox" />
+                    </label>
+                    <label class="label">
+                        <input type="radio" name="radio_m" class="checkbox radio_m" value="Amande" />
                         Amande
                     </label>
                 </fieldset>
-                <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-64 border p-4">
+                <fieldset class="fieldset fieldset_sup bg-base-100 border-base-300 rounded-box w-64 border p-4">
                     <legend class="fieldset-legend">Suppléments </legend>
                     <label class="label">
-                        <input type="checkbox" checked="checked" class="checkbox" />
+                        <input  type="checkbox" name="checkbox_sup" class="checkbox checkbox_sup" value="Vanille"/>
                         Vanille
-                        <input type="checkbox" class="checkbox" />
+                    </label>
+                    <label class="label">
+                        <input  type="checkbox" name="checkbox_sup" class="checkbox checkbox_sup" value="Caramel"/>
                         Caramel
-                        <input type="checkbox" class="checkbox" />
+                    </label>
+                    <label class="label">
+                        <input  type="checkbox" name="checkbox_sup" class="checkbox checkbox_sup" value="Noisette"/>
                         Noisette
                     </label>
                 </fieldset>
                 <div class="relative mt-24">
-                    <button class="btn btn-primary absolute right-0 bottom-0 mr-8 mt-4 nextbtn2">next</button>
-                    <button class="btn btn-neutral absolute bottom-0 left-0 ml-7 mt-4 gobackbtn1">go back</button>
+                    <button type="button"
+                        class="btn btn-primary absolute right-0 bottom-0 mr-8 mt-4 nextbtn2">next</button>
+                    <button type="button" class="btn btn-neutral absolute bottom-0 left-0 ml-7 mt-4 gobackbtn1">go
+                        back</button>
                 </div>
             </section>
             <section class="sec_03 hidden">
                 <div class="recapulative ">
+                    <div class=" w-full flex justify-center mt-6 mb-3"> <p class="text-2xl font-bold text-#394B32 " >VOTRE PRODUIT: </p> </div>
+                  <div class="normaldiv">
 
+                  </div>
                 </div>
                 <div class="relative mt-24">
                     <input type="submit" value="submit" class="absolute right-0 bottom-0 mr-8 mt-4 btn btn-primary">
-                    <button class="btn btn-neutral absolute bottom-0 left-0 ml-7 mt-4 gobackbtn2">go back</button>
+                    <button type="button" class="btn btn-neutral absolute bottom-0 left-0 ml-7 mt-4 gobackbtn2">go
+                        back</button>
                 </div>
             </section>
         </form>
