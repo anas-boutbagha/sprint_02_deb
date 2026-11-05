@@ -15,19 +15,25 @@ let obj = {
 
 
 
-
 let form_tt = document.querySelector('form')
-form_tt.addEventListener('click' , function(event){
-    event.preventDefault();
+form_tt.addEventListener('keydown', function (event) {
+    if (event.target.matches('input') && event.key === 'Enter') {
+        event.preventDefault();
+        
+    }
+    else {
+
+        return;
+    }
 })
 let sublit_btn = document.querySelector('input[type=submit]')
-sublit_btn.addEventListener('click' , function(event){
+sublit_btn.addEventListener('click', function (event) {
     form_tt.submit()
     swal({
-            title: "!!done!!",
-            text: "job's done",
-            setTimeout: 3000,
-        });
+        title: "!!done!!",
+        text: "job's done",
+        setTimeout: 3000,
+    });
 })
 
 function remplisage_obj() {
@@ -411,3 +417,4 @@ price_verif()
 discription_verif()
 url_verif()
 promotion_verif()
+
